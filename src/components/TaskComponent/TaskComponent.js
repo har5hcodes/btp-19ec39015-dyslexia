@@ -5,10 +5,11 @@ const TaskComponent = () => {
     <>
       <Container
         sx={{
-          minHeight: "100vh",
+          minHeight: "80vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          marginTop: "140px"
         }}
       >
         <Box>
@@ -20,7 +21,7 @@ const TaskComponent = () => {
               height: 400,
             }}
           >
-            <Grid item xs={8}>
+            <Grid item xs={10}>
               <Grid container direction="column" spacing={2}>
                 <Grid item>
                   <TextField
@@ -62,8 +63,17 @@ const TaskComponent = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={4}>
-              2
+
+
+            <Grid item xs={2}>
+                <Grid container spacing={1} direction="row">
+                  <Grid item xs={6}> <Button  variant="contained" >S</Button></Grid>   
+                  <Grid item xs={6}> <Button  variant="contained" >N</Button></Grid>   
+                  <Grid item xs={6}> <Button  variant="contained" >A</Button></Grid>   
+                  <Grid item xs={6}> <Button  variant="contained" >W</Button></Grid>   
+                  <Grid item xs={6}> <Button  variant="contained" >H</Button></Grid>   
+                  <Grid item xs={6}> <Button  variant="contained" >NS</Button></Grid>   
+                </Grid>
             </Grid>
           </Grid>
         </Box>

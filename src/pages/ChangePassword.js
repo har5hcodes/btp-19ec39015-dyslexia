@@ -10,7 +10,7 @@ const ChangePassword = () => {
       <Navbar />
       <Container
         style={{
-          marginTop: "100px",
+          marginTop: "100px", 
         }}
       >
         <Grid
@@ -18,8 +18,7 @@ const ChangePassword = () => {
           container
           direction="column"
           alignItems="center"
-          justifyContent="center"
-          minWidth="100vh"
+          justifyContent="center" 
         >
           <Grid item xs={12}>
             <TextField
