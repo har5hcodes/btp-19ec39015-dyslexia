@@ -12,13 +12,12 @@ import {
 import React from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-
-
+import { Link } from "react-router-dom";
 
 const StudentDashboard = () => {
   return (
     <>
-     <Navbar/>
+      <Navbar />
       <Grid
         container
         spacing={7}
@@ -39,7 +38,7 @@ const StudentDashboard = () => {
                 marginRight: "100px",
               }}
             >
-              Tasks to Perform
+              <Link to="/taskspage">Tasks to Perform</Link>
             </Button>
             <Button
               variant="contained"
@@ -78,12 +77,12 @@ const StudentDashboard = () => {
                 minHeight: "150px",
               }}
             >
-              Edit your Profile
+              <Link to="/edit-profile">Edit your Profile</Link>
             </Button>
           </div>
         </Grid>
       </Grid>
-      <Footer/>
+      <Footer />
     </>
   );
 };
