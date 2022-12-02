@@ -7,15 +7,36 @@ import {
   FormControl,
   Select,
   MenuItem,
-  Button,
-  Link,
+  Button, 
 } from "@mui/material";
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const EditProfileT = () => {
-   
+  const headers = {
+    accept: "application/json",
+    "Content-Type": "application/json"
+  }
+  
+  const fetchUser =()=>{
+    try {
+      axios.get('http://localhost:5000/user/u1', {
+        headers : headers
+      }).then((res)=>{
+        console.log(res);
+      })
+    }
+    catch(err){
+      console.log(err);
+    }
+  }
+  
+  useEffect(()=>{
+      fetchUser();
+  })
   return (
     <>
       <Navbar />

@@ -7,12 +7,12 @@ import {
   FormControl,
   Select,
   MenuItem,
-  Button,
-  Link,
+  Button, 
 } from "@mui/material";
 import React, { useState } from "react";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const EditProfileS = () => {
   const [classOpt, setClassOpt] = useState("");
@@ -120,7 +120,7 @@ const EditProfileS = () => {
             />
           </Grid>
           <Grid item xs={12}>
-            <Link to='change-password'>Click here to change password</Link>
+            <Link to='/change-password'>Click here to change password</Link>
           </Grid>
           <Grid item xs={12}>
             <Button

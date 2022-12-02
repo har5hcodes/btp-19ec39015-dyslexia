@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import { Grid, Button } from "@mui/material";
-import Footer from "../components/Footer/Footer";
+import { Grid, Button, Card, CardActions, CardContent,  Typography } from "@mui/material";
+import Footer from "../components/Footer/Footer";  
+import { Link } from "react-router-dom";
 const TasksPage = () => {
   return (
     <>
@@ -13,26 +14,17 @@ const TasksPage = () => {
         justifyContent="center"
         style={{ minHeight: "100vh" }}
       >
-        <Grid xs={3} display="flex" alignItems="center" justifyContent="center"> 
-          <Button variant="contained">1</Button> 
-        </Grid>
-        <Grid xs={3} display="flex" alignItems="center" justifyContent="center"> 
-          <Button variant="contained">1</Button> 
-        </Grid>
-        <Grid xs={3} display="flex" alignItems="center" justifyContent="center"> 
-          <Button variant="contained">1</Button> 
-        </Grid>
-        <Grid xs={3} display="flex" alignItems="center" justifyContent="center"> 
-          <Button variant="contained">1</Button> 
-        </Grid> 
-        <Grid xs={3} display="flex" alignItems="center" justifyContent="center"> 
-          <Button variant="contained">1</Button> 
-        </Grid> 
-        <Grid xs={3} display="flex" alignItems="center" justifyContent="center"> 
-          <Button variant="contained">1</Button> 
-        </Grid> 
-        <Grid xs={3} display="flex" alignItems="center" justifyContent="center"> 
-          <Button variant="contained">1</Button> 
+        <Grid xs={3} display="flex" alignItems="center" justifyContent="center">
+          <Card sx={{ maxWidth: 245 }}>
+            <CardContent>
+              <Typography variant="h5">
+                Task Name
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button  size="small"> <Link to="/taskpage">Perform Task</Link></Button>
+            </CardActions>
+          </Card>
         </Grid> 
       </Grid>
       <Footer />
